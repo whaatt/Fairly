@@ -1,0 +1,83 @@
+FairED API
+Sanjay Kannan
+
+Name [Column]
+Mentors
+Mentees
+
+time [0]
+name [1]
+college [2]
+gradYear [3]
+major [4]
+** email [5]
+** phone [6]
+** address [7]
+mentees [8]
+hours [9]
+levels [10]
+skills [11]
+STEM [12]
+STEMExp [13]
+arts [14]
+artsExp [15]
+scholarships [16]
+scholarshipsExp [17]
+essays [18]
+essaysExp [19]
+courses [20]
+coursesExp [21]
+summers [22]
+summersExp [23]
+entrepreneur [24]
+entrepreneurExp [25]
+volunteer [26]
+volunteerExp [27]
+testPref [28]
+other [29]
+tests [30]
+** code [31]
+available [32]
+** approval [33]
+** duplicate [34]
+photo [35]
+*** auth [36]
+
+time [0]
+name [1]
+school [2]
+level [3]
+email [4]
+phone [5]
+hours [6]
+skills [7]
+STEM [8]
+arts [9]
+scholarships [10]
+essays [11]
+courses [12]
+summers [13]
+entrepreneur [14]
+volunteer [15]
+other [16]
+testPref [17]
+tests [18]
+code [19]
+approval [20]
+duplicate [21]
+
+GET /api/mentors
+    param: email [mentee email]
+    param: code [mentee secret code]
+    returns applicable rows from mentors
+    formatted JSON is {data : [mentors], auth}
+        if auth works: auth true and contact info
+        if not auth: auth false and no contact info
+
+GET /api/mentee
+    param: email [mentee email]
+    param: code [mentee secret code]
+    returns row representation of approved mentee
+    formatted JSON is {data : {mentee}, auth}
+        if auth works: auth true and mentee
+        if not auth: auth false and mentee null
