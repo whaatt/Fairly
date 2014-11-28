@@ -1,6 +1,20 @@
 FairED API
 Sanjay Kannan
 
+search
+available
+hours
+
+STEM
+arts
+scholarships
+essays
+courses
+summers
+entrepreneur
+volunteer
+tests
+
 Name [Column]
 Mentors
 Mentees
