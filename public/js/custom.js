@@ -643,8 +643,11 @@ $(document).ready(function() {
             $('#invalid').hide();
             
             loadMentee(email, code, function() {
-                //mentee is null might be a shitty sentinel
-                if (mentee === null) $('#invalid').fadeIn();
+                //mentee null if invalid
+                if (mentee === null) {
+                    $('#invalid').fadeIn();
+                    $(sThis).removeAttr('disabled');
+                }
                 
                 else {                            
                     $('#suggested input').removeAttr('disabled');
