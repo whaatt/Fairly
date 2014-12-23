@@ -11,6 +11,7 @@
     <link href="css/bootstrap-slider.min.css" rel="stylesheet">
     
     <!-- custom styles and CSS reset techniques -->
+    <link href="css/pace.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -29,21 +30,28 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="panel panel-default">
-                  <div class="panel-body">
-                    Welcome to the FairED database! The logo should probably go here. Hope you enjoy.
+                  <div class="panel-body title">
+                    <img class="logo" src="http://static.squarespace.com/static/5374e865e4b0ad082232d2dd/t/545ac320e4b09756ea175659/1418798767689/?format=1500w"><b>The FairED Mentor Database</b><br>22 December: Version 0.1.1
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
+                <ul class="list-group">
+                  <li class="list-group-item user-bar-item"><a class="user-bar" href=""><b class="user-bar-text">Sign into your FairED mentee account.</b> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
                 <div class="panel panel-default">
                   <div class="panel-heading">
-                    Sort or Filter<a data-toggle="collapse" href="#filter-body"></a>
+                    Filter Mentors<a data-toggle="collapse" href="#filter-body"></a>
                   </div>
                   <div id="filter-body" class="panel-collapse collapse in">
                     <div class="panel-body">
-                      <input type="text" class="form-control" id="search" placeholder="Search by name or college."><br>
+                      <input type="text" class="form-control" id="search" placeholder="Search by mentor info."><br>
                       <div class="checkbox text-center" id="STEM">
                         <label>
                           <input type="checkbox"> STEM Experience
@@ -74,7 +82,7 @@
                           <input type="checkbox"> Summer Programs
                         </label>
                       </div>
-                      <div class="checkbox text-center" id="entrepreneurship">
+                      <div class="checkbox text-center" id="entrepreneur">
                         <label>
                           <input type="checkbox"> Entrepreneurship
                         </label>
@@ -84,17 +92,25 @@
                           <input type="checkbox"> Volunteering
                         </label>
                       </div>
-                      <div class="checkbox text-center" id="tests">
+                      <div class="checkbox text-center" id="testPref">
                         <label>
                           <input type="checkbox"> Test Taking
-                        </label>
-                      </div><br>
+                        </label><br><br>
+                      </div>
                       <div class="text-center">
-                        <label>Hours Per Week:</label><br>
-                        <input type="text" class="form-control" id="hours" data-slider-min="1" data-slider-max="6" data-slider-step="1" data-slider-value="[1,6]"/>
+                        <div class="checkbox" id="suggested">
+                          <label>
+                            <input type="checkbox" disabled="disabled"> <span id="suggest-text">Sign in above for suggestions.</span>
+                          </label>
+                        </div>
                         <div class="checkbox" id="available">
                           <label>
                             <input type="checkbox"> Show only available mentors.
+                          </label>
+                        </div>
+                        <div class="checkbox" id="minimal">
+                          <label>
+                            <input type="checkbox"> Hide all mentor pictures.
                           </label>
                         </div>
                       </div>
@@ -103,160 +119,23 @@
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="btn-group sorts btn-group-justified" role="group" aria-label="...">
+                  <a class="btn sort active btn-default" data-sort="name">Name</a>
+                  <a class="btn sort btn-default" data-sort="college">College</a>
+                  <a class="btn sort btn-default" data-sort="major">Major</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-md-9">
-          <div class="row mason">  
-            <div class="col-md-4">
+          <div class="row mason mentors">
+            <div class="col-md-7 place">
               <div class="panel panel-default">
                 <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 j">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example<br>
-                  Basic panel example<br>
-                  Basic panel example<br>
-                  Basic panel example<br>
-                  Basic panel example<br>
-                  Basic panel example<br>
-                  Basic panel example<br>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  Basic panel example
+                  <h1>Please refresh if our mentors are taking a while to show up.</h1>
                 </div>
               </div>
             </div>
@@ -265,11 +144,117 @@
       </div>
     </div>
     
+    <div class="col-md-3 mentor-item-template hide">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h5 class="identifier">
+            <b class="name">John Doe</b> 
+            <small>Class of <span class="gradYear">2018</span></small>
+          </h5>
+          <h6 class="college">University of California at Berkeley</h6>
+          <h6 class="major">Electrical Engineering and Computer Science</h6>
+        </div>
+        <ul class="list-group suggest-footer">
+          <li class="list-group-item text-center"><b>Similarity: <span class="similarity">100</span>%</b></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="modal fade info" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <h4 class="modal-title">
+              <span class="label state label-danger">Unavailable</span>&nbsp;
+              <span class="name">John Doe</span>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <h5 class="gradWrap no-top">Class of <span class="gradYear">2018</span></h5>
+            <h5 class="college no-top">University of California at Berkeley</h5>
+            <h5 class="major no-top">Electrical Engineering and Computer Science</h5>
+            <h3>Skills</h3>
+            <span class="skills">
+            </span>
+            <h3>Contact</h3>
+            <span class="no-contacts">
+              <h6>You must be signed into a mentee account to view any mentor contact information. If you are a mentee and do not have an account, please contact the FairED administration.</h6>
+            </span>
+            <span class="contacts">
+              <h6 class="contact"><b>Email</b>: <span class="email">jdoe@berkeley.edu</span></h6>
+              <h6 class="contact"><b>Phone</b>: <span class="phone">(555) 555-5555</span></h6>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade login" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <h4 class="modal-title">
+              Mentee Login
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger" id="invalid" role="alert"><b>Invalid login credentials. Please try again.</b></div>
+            <form class="login-form">
+              <input type="text" class="form-control" id="mentee-email" placeholder="Enter your email address."><br>
+              <input type="password" class="form-control" id="mentee-code" placeholder="Enter your access code.">
+              <input type="submit" class="hide">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" type="submit" class="btn btn-primary login-button">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade profile" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <h4 class="modal-title">
+              Mentee Profile
+            </h4>
+          </div>
+          <div class="modal-body">
+            <h5 class="levelWrap no-top">Grade Level: <span class="level">Sophomore</span></h5>
+            <h5 class="school no-top">Enloe High School</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" type="submit" class="btn btn-primary logout-button">Sign Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <h6 class="skill skill-template"><b><a href="" data-html="true" data-toggle="popover" data-trigger="focus" title="" data-content=""></a></b></h6>
+    
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/underscore.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-slider.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/fit-columns.js"></script>
+    <script src="js/packery-mode.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/pace.min.js"></script>
     <script src="js/custom.js"></script>
   </body>
 </html>

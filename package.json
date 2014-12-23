@@ -1,0 +1,29 @@
+{
+  "name": "Fairly",
+  "version": "0.0.1",
+  "description": "The Official FairED API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whaatt/Fairly.git"
+  },
+  "keywords": [
+    "FairED",
+    "Education",
+    "Mentorship"
+  ],
+  "author": "Sanjay Kannan",
+  "license": "Tautology",
+  "bugs": {
+    "url": "https://github.com/whaatt/Fairly/issues"
+  },
+  "homepage": "https://github.com/whaatt/Fairly",
+  "dependencies": {
+    "express": "^4.10.4",
+    "tabletop": "^1.3.5",
+    "underscore": "^1.7.0"
+  }
+}

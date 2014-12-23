@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^api$ http://127.0.0.1:53135/api/ [P,L]
+RewriteRule ^api/(.*)$ http://127.0.0.1:53135/api/$1 [P,L]
+RewriteRule ^$ http://127.0.0.1:53135/ [P,L]
+RewriteRule ^(.*)$ http://127.0.0.1:53135/$1 [P,L]
