@@ -639,9 +639,6 @@ $(document).ready(function() {
             var email = $('#mentee-email').val();
             var code = $('#mentee-code').val();
             
-            $('#suggested input').removeAttr('disabled');
-            $('#suggest-text').html('Show my suggested mentors.');
-            
             $(this).blur();
             $('#invalid').hide();
             
@@ -649,7 +646,10 @@ $(document).ready(function() {
                 //mentee is null might be a shitty sentinel
                 if (mentee === null) $('#invalid').fadeIn();
                 
-                else {
+                else {                            
+                    $('#suggested input').removeAttr('disabled');
+                    $('#suggest-text').html('Show my suggested mentors.');
+
                     $('.profile .modal-title').html(mentee.name);
                     $('.profile .level').html(mentee.level);
                     $('.profile .school').html(mentee.school);
