@@ -7,11 +7,14 @@ var sheets = require('tabletop');
 //handy tools for functional
 var tool = require('underscore');
 
+//import the secret Google Form keys
+var secrets = require('./secrets.js')
+
 //express instance
 var app = express();
 
-var mentorKey = 'DEADBEEF';
-var menteeKey = 'BEEFDEAD';
+var mentorKey = secrets['mentorKey'];
+var menteeKey = secrets['menteeKey'];
 
 var mentorAlias = [
     'time',
@@ -22,6 +25,7 @@ var mentorAlias = [
     'email', //auth hide
     'phone', //auth hide
     'address', //hide
+    'GPA', //hide
     'mentees',
     'hours',
     'levels',
@@ -106,8 +110,10 @@ var mentors = function(req, res) {
             for (var i = 0; i < data.length; i += 1) {
                 //codes are a secret
                 //addresses are secret
+                //GPAs are very secret
                 delete data[i].code;
                 delete data[i].address;
+                delete data[i].GPA;
                 
                 //no contact info
                 if (auth === false) {
