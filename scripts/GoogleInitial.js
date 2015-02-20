@@ -1,7 +1,7 @@
 //sort of inefficient; works for the time being
 function getRandWithExclusion(start, end, codes) {
   var num = Math.floor(Math.random() * (end - start));
-  while (codes.indexOf(num) != -1) num = (num + 1) % (end - start + 1);
+  while (codes.indexOf(num) !== -1) num = (num + 1) % (end - start + 1);
   return Math.floor(num + start);
 };
 
@@ -63,8 +63,7 @@ function emailCodes() {
     }
     
     //a small confirmation message
-    ui.alert('Email Codes', 'Successfully sent.', ui.ButtonSet.OK);
-    
+    ui.alert('Email Codes', 'Successfully sent.', ui.ButtonSet.OK); 
   }
 }
 
